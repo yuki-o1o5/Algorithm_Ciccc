@@ -9,15 +9,14 @@
  ******
  */
 
-function printStars(n) {
-  let item = "";
-  for (let i = 0; i <= n; i++) {
-    item = item + "*";
-    console.log(item);
-  }
-}
-
-printStars(5);
+// function printStars(n) {
+//   let item = "";
+//   for (let i = 0; i <= n; i++) {
+//     item = item + "*";
+//     console.log(item);
+//   }
+// }
+// printStars(5);
 
 // item       i      console.log
 // ""         0      "*"
@@ -25,6 +24,17 @@ printStars(5);
 //            2      "***"
 //            3      "****"
 //            4      "*****"
+
+function printStar1(n) {
+  for (let line = 0; line < n; line++) {
+    let word = "*";
+    for (let char = 0; char < line; char++) {
+      word += "*";
+    }
+    console.log(word);
+  }
+}
+printStar1(5);
 
 // Question 1
 
@@ -38,18 +48,19 @@ printStars(5);
 **
 *
 
-
 */
 
-function printStars2(n) {
-  let item = "";
-  for (let i = n; i <= n; i--) {
-    item = item - "*";
-    console.log(item);
+function printStar2(n) {
+  for (let line = 0; line < n; line++) {
+    let word = "";
+    // console.log("*");
+    for (let char = 0; char < n - line; char++) {
+      word += "*";
+    }
+    console.log(word);
   }
 }
-
-printStars(5);
+printStar2(5);
 
 // Question 2
 
@@ -67,33 +78,49 @@ printStars(5);
 **
 *
 
-
 */
 
-function printStars() {
-  let item = "";
-  for (let i = 0; i < 5; i++) {
-    item = item + "*";
-    console.log(item);
+function printStar3(n) {
+  for (let line = 0; line < n; line++) {
+    let word1 = "*";
+    for (let char = 0; char < line; char++) {
+      word1 += "*";
+    }
+    console.log(word1);
   }
-  let item2 = "";
-  for (let n = 0; n < 4; n--) {
-    item2 = "****" - item2;
-    console.log(item2);
+  for (let line = 0; line < n; line++) {
+    let word2 = "";
+    for (let char = 1; char < n - line; char++) {
+      word2 += "*";
+    }
+    console.log(word2);
   }
 }
-printStars();
+printStar3(5);
 
 // Question 3
 
 // Write a function that takes a value n as a parameter, and prints the following pattern
 
 /*
+
       *
     *   *
   *       *
 *  * * * *  *  
 
-
-
 */
+
+function printStar4(n) {
+  for (let line = 0; line < n; line++) {
+    let word = "";
+    // console.log("*");
+    for (let char = 0; char < n - line; char++) {
+      word += " ";
+    }
+    word = word + "*";
+    console.log(word);
+  }
+}
+
+printStar4(3);
